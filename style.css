@@ -1,5 +1,6 @@
 html {
     color-scheme: light dark;
+    --color-accent: oklch(65% 50% 0);
 }
 body {
   /* Set line height to 1.5 times the font size
@@ -16,7 +17,7 @@ img {
   max-width: 100%;
   height: auto;}
 
-NAVIGATION
+
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
@@ -29,7 +30,7 @@ nav a {
   color: inherit;
   text-align: center;
   padding: 0.5em;
-}  /* ← Don't forget this closing brace! */
+}  
 
 nav a.current {
   border-bottom: 0.4em solid oklch(80% 3% 200);
@@ -42,8 +43,8 @@ nav a:hover {
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-CONTACT
-input, textarea, botton {
+
+input, textarea, button {
   font:inherit;
 }
 form{
@@ -62,23 +63,26 @@ form button {
   padding: 0.5em 1em;
   cursor:pointer;
 }
-PROJECT
-.project{
-  display:grid;
+
+.projects {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap:2em;
+  gap: 2em;  
 }
+
 .projects article {
-  display:grid;
+  display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
 }
+
 .projects article h2 {
-  margin:0;
+  margin: 0;
 }
+
 .projects article img {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 h1 {
   font-size:400%;
@@ -88,10 +92,7 @@ h1,h2,h3,h4,h5,h6 {
   text-wrap:balance;
 }
 
-CV PAGE
-html {
-  --color-accent:oklch(65% 50% 0);
-}
+
 section {
   margin-bottom: 3em;
   border-left:4px solid var(--color-accent);
@@ -106,7 +107,7 @@ section h2{
 section article {
   margin-bottom:2em;
   padding-bottom:1.5em;
-  border-bottom: 1px solid oklach (90% 2% 200);
+  border-bottom: 1px solid oklch (90% 2% 200);
 }
 section article:last-child{
   border-bottom:none;
