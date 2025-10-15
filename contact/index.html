@@ -7,31 +7,21 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav>
-    <a href="../index.html">Home</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="index.html" class="current">Contact</a>
-    <a href="../cv/index.html">CV</a>
-    <a href="https://github.com/boson25" target="_blank">GitHub</a>
-    </nav>
+
     
     <h1>Contact</h1>
-    <form action="mailto:boson@ucsd.edu" method="POST" enctype="text/plain">
-        <label>
-            Email:
-            <input type="email" name="email" required>
-        </label>
-        <label>
-            Subject:
-            <input name="subject" required>
-        </label>
-        <label>
-            Message:
-            <textarea name="body" required></textarea>
-        </label>
-        <button>Send</button>
-    </form>
+   <form action="mailto:boson@ucsd.edu" method="GET">
+    <label>
+        Subject:
+        <input name="subject" required>
+    </label>
+    <label>
+        Message:
+        <textarea name="body" required></textarea>
+    </label>
+    <button type="submit">Send</button>
+</form>
 
-
+    <script type="module" src="../global.js"></script>
 </body>
 </html>
