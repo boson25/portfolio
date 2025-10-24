@@ -73,7 +73,7 @@ form button {
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;
 }
 
 .projects article h2 {
@@ -135,4 +135,12 @@ section li{
 
 .color-scheme select {
     font-family: inherit;
+}
+
+.year {
+  color: #9F666E;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight:bold;
+  margin-top: 0em;
 }
