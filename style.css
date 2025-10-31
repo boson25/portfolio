@@ -144,3 +144,84 @@ section li{
   font-weight:bold;
   margin-top: 0em;
 }
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+.pie-container {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  margin-block: 2em;
+  padding: 1.5em;
+  border: 1px solid oklch(85% 5% 200);
+  border-radius: 0.5em;
+}
+
+.legend {
+  flex: 1;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+}
+
+.legend .swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend em {
+  color: oklch(50% 10% 200);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.75em 1em;
+  margin-block: 1.5em;
+  font-size: 1em;
+  border: 2px solid oklch(80% 5% 200);
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: opacity 300ms, fill 300ms;
+}
+
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
