@@ -4,17 +4,15 @@ function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-// Step 2 code 
-// let navLinks = $$("nav a");
-// let currentLink = navLinks.find((a) => a.host === location.host && a.pathname === location.pathname);
-// currentLink?.classList.add('current');
+
 
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'cv/', title: 'CV' },
-    { url: 'https://github.com/boson25', title: 'GitHub' }
+    { url: 'https://github.com/boson25', title: 'GitHub' },
+    { url: 'meta/', title: 'Code Analysis' }
 ];
 
 
