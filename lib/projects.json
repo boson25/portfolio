@@ -70,5 +70,13 @@
     "year": 2023,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Minus, velit perferendis eligendi rerum voluptates veritatis voluptatibus id ut esse harum nulla omnis eaque, animi corrupti quia in quasi aliquid cumque molestiae. Cum dolore id, obcaecati dolorem a quisquam?"
-  }
+  },
+  {
+
+  "title": "Bikewatching",
+  "year": 2025,
+  "image": "../images/bikewatching-screenshot.png",
+  "description": "Interactive geospatial visualization of Bluebikes traffic patterns in Boston, showing station activity and traffic flow throughout the day using Mapbox and D3.js",
+  "url": "https://boson2025.github.io/bikewatching/"
+}
 ]

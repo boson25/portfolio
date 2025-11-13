@@ -4,8 +4,6 @@ function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-
-
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
@@ -15,15 +13,12 @@ let pages = [
     { url: 'meta/', title: 'Code Analysis' }
 ];
 
-
 const BASE_PATH = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/'  
     : '/portfolio/';  
 
-
 let nav = document.createElement('nav');
 document.body.prepend(nav);
-
 
 for (let p of pages) {
     let url = p.url;
@@ -98,7 +93,6 @@ form?.addEventListener('submit', function(event) {
 
 export async function fetchJSON(url) {
   try {
-    
     const response = await fetch(url);
     
     if (!response.ok) {
@@ -124,11 +118,13 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       <p class="year">${project.year}</p>
       <img src="${project.image}" alt="${project.title}">
       <p>${project.description}</p>
+      ${project.url ? `<a href="${project.url}" target="_blank" class="project-link">View Live Project →</a>` : ''}
     `;
     
     containerElement.appendChild(article);
   });
 }
+
 export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
